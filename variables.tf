@@ -15,7 +15,7 @@ variable "name" {
   type        = string
 }
 
-variable "priority_flow_control_mode" {
+variable "priority" {
   default     = "auto"
   description = <<-EOT
     Configure PFC on a per-port basis to enable the no-drop behavior for the CoS as defined by the active network qos policy.
@@ -25,7 +25,7 @@ variable "priority_flow_control_mode" {
   type        = string
 }
 
-variable "receive_direction" {
+variable "receive" {
   default     = "Disabled"
   description = <<-EOT
     Link-level Flow Control configured in the receive direction.
@@ -35,7 +35,7 @@ variable "receive_direction" {
   type        = string
 }
 
-variable "send_direction" {
+variable "send" {
   default     = "Disabled"
   description = <<-EOT
     Link-level Flow Control configured in the send direction.

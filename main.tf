@@ -25,9 +25,9 @@ resource "intersight_fabric_flow_control_policy" "flow_control" {
   ]
   description                = var.description != "" ? var.description : "${var.name} Flow Control Policy."
   name                       = var.name
-  priority_flow_control_mode = var.priority_flow_control_mode
-  receive_direction          = var.receive_direction
-  send_direction             = var.send_direction
+  priority_flow_control_mode = var.priority
+  receive_direction          = var.receive
+  send_direction             = var.send
   organization {
     moid = length(
       regexall("[[:xdigit:]]{24}", var.organization)
